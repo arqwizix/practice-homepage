@@ -514,6 +514,217 @@ img {
 }
 
 /* =========================
+   TOMATO ONE PAGE
+========================= */
+
+.tomato-one-page {
+    position: relative;
+    overflow: hidden;
+    padding: 26px 0 0;
+    background-color: #f3f3f3;
+    background-image: url("../images/tomato-one-bg.png");
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: 82%;
+}
+
+.tomato-one-page::before,
+.tomato-one-page::after {
+    content: none;
+}
+
+.tomato-one-container {
+    position: relative;
+    z-index: 1;
+    max-width: 980px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: #57984C;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.back-link-arrow {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.tomato-one-top {
+    padding-bottom: 12px;
+}
+
+.tomato-one-info {
+    max-width: 430px;
+}
+
+.tomato-one-title {
+    margin: 0 0 14px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 56px;
+    line-height: 1.05;
+    font-weight: 700;
+    color: #324950;
+}
+
+.tomato-one-subtitle {
+    margin: 0 0 26px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 56px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #57984C;
+}
+
+.tomato-one-stars {
+    margin-bottom: 28px;
+}
+
+.quality-box {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 34px;
+}
+
+.quality-box img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.quality-box p {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 26px;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #e23d48;
+}
+
+.characteristics-title {
+    margin: 0 0 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #57984C;
+    width: 230px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #57984C;
+}
+
+.resistance-block {
+    margin-bottom: 30px;
+}
+
+.resistance-block h3 {
+    margin: 0 0 10px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #324950;
+}
+
+.resistance-block p {
+    margin: 0 0 6px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #324950;
+}
+
+.tomato-one-media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 12px;
+}
+
+.tomato-one-media img {
+    width: 100%;
+    max-width: 445px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 26px;
+}
+
+.pdf-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-width: 210px;
+    height: 56px;
+    border: 2px solid #57984C;
+    border-radius: 30px;
+    color: #57984C;
+    background-color: transparent;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.pdf-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.tomato-one-details {
+    padding: 12px 0 90px;
+}
+
+.detail-group {
+    max-width: 420px;
+    margin-bottom: 42px;
+}
+
+.detail-group h3 {
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #57984C;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #57984C;
+}
+
+.detail-group ul {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.detail-group li {
+    margin-bottom: 12px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #324950;
+}
+
+.detail-group li::marker {
+    color: #57984C;
+}
+
+.detail-color {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #324950;
+}
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -658,6 +869,15 @@ img {
     .tomato-products-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .tomato-one-title,
+    .tomato-one-subtitle {
+        font-size: 46px;
+    }
+
+    .quality-box p {
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -773,6 +993,33 @@ img {
     .tomato-products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .tomato-one-page::before,
+    .tomato-one-page::after {
+        display: none;
+    }
+
+    .tomato-one-top,
+    .tomato-one-details {
+        text-align: left;
+    }
+
+    .tomato-one-media {
+        margin-top: 30px;
+    }
+
+    .tomato-one-title,
+    .tomato-one-subtitle {
+        font-size: 38px;
+    }
+
+    .quality-box p {
+        font-size: 20px;
+    }
+
+    .detail-group {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -836,6 +1083,24 @@ img {
 
     .tomato-products-grid {
         grid-template-columns: 1fr;
+    }
+
+    .tomato-one-title,
+    .tomato-one-subtitle {
+        font-size: 30px;
+    }
+
+    .quality-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quality-box p {
+        font-size: 18px;
+    }
+
+    .tomato-one-media img {
+        max-width: 100%;
     }
 }
 
@@ -916,5 +1181,24 @@ img {
 
     .tomato-card img {
         height: 220px;
+    }
+
+    .back-link {
+        font-size: 13px;
+    }
+
+    .tomato-one-title,
+    .tomato-one-subtitle {
+        font-size: 24px;
+    }
+
+    .characteristics-title {
+        width: 200px;
+        font-size: 22px;
+    }
+
+    .pdf-btn {
+        min-width: 180px;
+        font-size: 14px;
     }
 }
