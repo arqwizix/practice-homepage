@@ -18,6 +18,10 @@ img {
     display: block;
 }
 
+/* =========================
+   HOMEPAGE
+========================= */
+
 .hero {
     min-height: 620px;
     background-image: url("../images/hero-bg.jpg");
@@ -28,6 +32,7 @@ img {
 
 .site-header {
     padding-top: 20px;
+    background-color: #ffffff;
 }
 
 .header-inner {
@@ -364,6 +369,154 @@ img {
     color: #324950;
 }
 
+/* =========================
+   TOMATO ALL PAGE
+========================= */
+
+.tomato-header {
+    position: relative;
+    z-index: 2;
+}
+
+.tomato-header .logo img {
+    width: 180px;
+    height: auto;
+}
+
+.tomato-banner {
+    height: 322px;
+    background: url("../images/tomato-banner.jpg") center/cover no-repeat;
+}
+
+.tomato-page {
+    background-color: #f1e7e8;
+}
+
+.tomato-container {
+    max-width: 1080px;
+}
+
+.tomato-content {
+    padding: 38px 0 12px;
+}
+
+.tomato-title {
+    margin: 0 0 14px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #324950;
+}
+
+.tomato-stars {
+    margin-bottom: 26px;
+}
+
+.tomato-text {
+    max-width: 1020px;
+    margin: 0 0 22px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    color: #324950;
+}
+
+.tomato-text strong {
+    font-weight: 700;
+}
+
+.tomato-note {
+    margin: 28px 0 0;
+    padding-left: 20px;
+    border-left: 4px solid #f15b5d;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 1.45;
+    color: #324950;
+}
+
+.tomato-note-small {
+    margin: 0 0 28px;
+    font-weight: 700;
+}
+
+.tomato-programs {
+    padding: 20px 0 40px;
+}
+
+.tomato-programs-box {
+    background-color: #ffffff;
+    padding: 28px 20px 16px;
+}
+
+.program-card {
+    padding: 0 18px 10px;
+    min-height: 100%;
+}
+
+.program-card h3 {
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #324950;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #324950;
+}
+
+.program-card p {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #324950;
+}
+
+.tomato-products {
+    padding: 8px 0 56px;
+}
+
+.tomato-products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px 26px;
+}
+
+.tomato-card {
+    text-align: center;
+    background-color: #f8f3f3;
+    padding-bottom: 12px;
+}
+
+.tomato-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.tomato-card h4 {
+    margin: 14px 0 6px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #57984C;
+}
+
+.tomato-card p {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #57984C;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 .site-footer {
     background-color: #2d3f45;
 }
@@ -421,6 +574,10 @@ img {
     font-size: 14px;
     line-height: 1.2;
 }
+
+/* =========================
+   ADAPTIVE
+========================= */
 
 @media (max-width: 1399px) {
     .about-section .container {
@@ -492,6 +649,14 @@ img {
 
     .activity-card p {
         font-size: 18px;
+    }
+
+    .tomato-title {
+        font-size: 46px;
+    }
+
+    .tomato-products-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -588,6 +753,26 @@ img {
     .footer-menu {
         justify-content: center;
     }
+
+    .tomato-banner {
+        height: 250px;
+    }
+
+    .tomato-title {
+        font-size: 38px;
+    }
+
+    .tomato-programs-box {
+        padding: 24px 18px 10px;
+    }
+
+    .program-card {
+        margin-bottom: 24px;
+    }
+
+    .tomato-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 767px) {
@@ -633,6 +818,24 @@ img {
 
     .footer-menu {
         gap: 16px;
+    }
+
+    .tomato-banner {
+        height: 210px;
+    }
+
+    .tomato-title {
+        font-size: 30px;
+    }
+
+    .tomato-text,
+    .tomato-note,
+    .program-card p {
+        font-size: 16px;
+    }
+
+    .tomato-products-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -685,5 +888,33 @@ img {
     .social-links {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .tomato-banner {
+        height: 180px;
+    }
+
+    .tomato-content {
+        padding-top: 28px;
+    }
+
+    .tomato-title {
+        font-size: 26px;
+    }
+
+    .tomato-programs-box {
+        padding: 18px 14px 6px;
+    }
+
+    .program-card {
+        padding: 0 8px 10px;
+    }
+
+    .program-card h3 {
+        font-size: 17px;
+    }
+
+    .tomato-card img {
+        height: 220px;
     }
 }
