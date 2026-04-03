@@ -45,41 +45,66 @@ document.addEventListener('DOMContentLoaded', function () {
                     desc: 'Lavender stripe oval eggplant with unusual color tone, attractive shape and fresh market appeal for premium presentation.'
                 }
             ],
+
             product: null,
             btnVisible: 0,
-            cartProducts: []
+
+            cart: [],
+
+            contactFields: {
+                name: '',
+                companyName: '',
+                position: '',
+                city: '',
+                country: '',
+                telephone: '',
+                email: '',
+                who: 'seed producer',
+                other: '',
+                interest: '',
+                code: ''
+            },
+
+            orderDone: false,
+            orderedData: null
         },
+
         mounted: function () {
             this.getProduct();
+            this.getCart();
             this.checkInCart();
-            this.getCartProducts();
         },
+
         methods: {
             getProduct: function () {
-                if (window.location.hash) {
-                    var id = Number(window.location.hash.replace('#', ''));
+                if (!window.location.hash) {
+                    return;
+                }
 
-                    for (var i = 0; i < this.products.length; i++) {
-                        if (this.products[i].id === id) {
-                            this.product = this.products[i];
-                            break;
-                        }
+                var id = Number(window.location.hash.replace('#', ''));
+
+                for (var i = 0; i < this.products.length; i++) {
+                    if (this.products[i].id === id) {
+                        this.product = this.products[i];
+                        break;
                     }
                 }
             },
 
             addToCart: function (id) {
-                var cart = [];
+                var storedCart = [];
 
                 if (window.localStorage.getItem('cart')) {
-                    cart = window.localStorage.getItem('cart').split(',');
+                    storedCart = window.localStorage.getItem('cart').split(',').filter(Boolean);
                 }
 
-                if (cart.indexOf(String(id)) === -1) {
-                    cart.push(String(id));
-                    window.localStorage.setItem('cart', cart.join(','));
-                    this.btnVisible = 1;
+                if (storedCart.indexOf(String(id)) === -1) {
+                    storedCart.push(String(id));
+                    window.localStorage.setItem('cart', storedCart.join(','));
                 }
+
+                this.btnVisible = 1;
+                this.getCart();
             },
 
             checkInCart: function () {
@@ -89,23 +114,84 @@ document.addEventListener('DOMContentLoaded', function () {
                     window.localStorage.getItem('cart').split(',').indexOf(String(this.product.id)) !== -1
                 ) {
                     this.btnVisible = 1;
+                } else {
+                    this.btnVisible = 0;
                 }
             },
 
-            getCartProducts: function () {
-                this.cartProducts = [];
+            getCart: function () {
+                this.cart = [];
 
                 if (!window.localStorage.getItem('cart')) {
                     return;
                 }
 
-                var cart = window.localStorage.getItem('cart').split(',');
+                var storedIds = window.localStorage.getItem('cart').split(',').filter(Boolean);
 
-                for (var i = 0; i < this.products.length; i++) {
-                    if (cart.indexOf(String(this.products[i].id)) !== -1) {
-                        this.cartProducts.push(this.products[i]);
+                for (var i = 0; i < storedIds.length; i++) {
+                    var currentId = Number(storedIds[i]);
+
+                    for (var j = 0; j < this.products.length; j++) {
+                        if (this.products[j].id === currentId) {
+                            this.cart.push(this.products[j]);
+                            break;
+                        }
                     }
                 }
+            },
+
+            removeFromCart: function (id) {
+                this.cart = this.cart.filter(function (item) {
+                    return item.id !== id;
+                });
+
+                var newIds = this.cart.map(function (item) {
+                    return String(item.id);
+                });
+
+                if (newIds.length) {
+                    window.localStorage.setItem('cart', newIds.join(','));
+                } else {
+                    window.localStorage.removeItem('cart');
+                }
+
+                if (this.product && this.product.id === id) {
+                    this.btnVisible = 0;
+                }
+            },
+
+            makeOrder: function () {
+                this.orderedData = {
+                    name: this.contactFields.name,
+                    companyName: this.contactFields.companyName,
+                    position: this.contactFields.position,
+                    city: this.contactFields.city,
+                    country: this.contactFields.country,
+                    telephone: this.contactFields.telephone,
+                    email: this.contactFields.email,
+                    who: this.contactFields.who,
+                    other: this.contactFields.other,
+                    interest: this.contactFields.interest,
+                    code: this.contactFields.code
+                };
+
+                this.orderDone = true;
+                this.cart = [];
+                window.localStorage.removeItem('cart');
+
+                this.contactFields = {
+                    name: '',
+                    companyName: '',
+                    position: '',
+                    city: '',
+                    country: '',
+                    telephone: '',
+                    email: '',
+                    who: 'seed producer',
+                    other: '',
+                    interest: '',
+                    code: ''
+                };
             }
         }
     });

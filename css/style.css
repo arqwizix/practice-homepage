@@ -1473,3 +1473,107 @@ img {
     line-height: 1.4;
     color: #324950;
 }
+
+/*cart table+order result*/
+
+.cart-table-section {
+    margin: 0 0 34px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin-bottom: 28px;
+}
+
+.cart-table th,
+.cart-table td {
+    border: 1px solid #d9d9d9;
+    padding: 14px 16px;
+    vertical-align: middle;
+    text-align: left;
+    font-family: 'Roboto Slab', serif;
+    color: #324950;
+}
+
+.cart-table th {
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #f8f8f8;
+}
+
+.cart-table td {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.cart-mini-image {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-remove-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: #e74c3c;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-remove-btn:hover {
+    background-color: #cb3b2c;
+}
+
+.order-result {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    padding: 28px;
+    margin-top: 20px;
+}
+
+.order-result-title {
+    margin: 0 0 24px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #324950;
+}
+
+.order-result-grid p {
+    margin: 0 0 14px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #324950;
+}
+
+@media (max-width: 767px) {
+    .cart-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .order-result {
+        padding: 20px;
+    }
+
+    .order-result-title {
+        font-size: 28px;
+    }
+
+    .order-result-grid p {
+        font-size: 16px;
+    }
+}
