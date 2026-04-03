@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=320, initial-scale=1.0">
-    <title>Tomato all</title>
+    <title>Eggplant all</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -14,9 +14,11 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
-
+    <div id="app">
     <header class="site-header tomato-header">
         <div class="container">
             <div class="header-inner">
@@ -25,162 +27,72 @@
                 </a>
 
                 <div class="header-right">
-    <div class="mobile-top-row">
-        <div class="search-row">
-            <input type="text" placeholder="Search">
-            <button type="button" class="search-btn" aria-label="Search">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
+                    <div class="mobile-top-row">
+                        <div class="search-row">
+                            <input type="text" placeholder="Search">
+                            <button type="button" class="search-btn" aria-label="Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
 
-        <div class="burger">
-            <i class="fas fa-bars"></i>
-        </div>
-    </div>
+                        <button class="burger" type="button" aria-label="Open menu">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
 
-    <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="#">Company Profile</a>
-        <a href="tomatoall.html">Products</a>
-        <a href="#">Services</a>
-        <a href="#">R &amp; D</a>
-        <a href="contactus.html">Contact</a>
-    </nav>
-</div>
+                    <nav class="main-nav">
+                        <a href="index.html">Home</a>
+                        <a href="#">Company Profile</a>
+                        <a href="tomatoall.html">Products</a>
+                        <a href="#">Services</a>
+                        <a href="#">R &amp; D</a>
+                        <a href="contactus.html">Contact</a>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="tomato-banner"></section>
+    <section class="tomato-banner eggplant-banner"></section>
 
-    <main class="tomato-page">
+    <main class="tomato-page eggplant-page">
         <section class="tomato-content">
             <div class="container tomato-container">
-                <h1 class="tomato-title">Agridera Fresh Market Tomato Hybrids</h1>
+                <h1 class="tomato-title">Agridera Fresh Market Eggplants</h1>
                 <div class="section-stars tomato-stars">*****</div>
 
                 <p class="tomato-text tomato-text-strong">
-                    Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of tomato seeds.
+                    Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of eggplant seeds.
                     <strong>We invest intensively in research and development to provide solutions to growers and consumers in numerous countries around the world.</strong>
-                    In particular, we breed improved disease-resistant cultivars adapted to different markets globally.
+                    In particular, we breed improved varieties adapted to different markets globally.
                 </p>
 
                 <p class="tomato-text">
-                    Currently, emphasis is placed on combining Tomato Yellow Leaf Curl Virus (TYLCV) and Tomato Spotted Wilt Virus (TSWV)
-                    resistances with other soil borne diseases into superior tomato breeding lines and hybrids. Moreover, comprehensive efforts
-                    are being undertaken to develop varieties resistance to TBRFV virus (Tomato Brown Rugose Fruit Virus).
+                    Currently, emphasis is placed on combining attractive fruit shape, deep purple color, glossiness, strong plant vigor and stable production performance.
+                    Comprehensive efforts are being undertaken to develop eggplant varieties suited for fresh market use and commercial cultivation.
                 </p>
 
                 <p class="tomato-text">
-                    In terms of horticultural traits, breeding is for earliness, different fruit sizes, firmness, red fruit color, flavor,
-                    crack resistance, shelf life, and high/low temperature fruit set. Combinations of quality features and disease resistance
-                    are sought in a variety of types, namely round and elongated shapes.
+                    In terms of horticultural traits, breeding is for uniformity, firmness, glossy skin, attractive shape, shelf life and dependable fruit set.
+                    Combinations of quality features and disease resistance are sought in a variety of types for different market needs.
                 </p>
 
                 <div class="tomato-note">
-                    Agridera Tomato breeding programs are focusing on three main segments: Greenhouse Indeterminate Tomatoes,
-                    Open-field Indeterminate Tomatoes, and Bush Type Open-field Tomatoes.
-                </div>
-            </div>
-        </section>
-
-        <section class="tomato-programs">
-            <div class="container tomato-container">
-                <div class="tomato-programs-box">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <div class="program-card">
-                                <h3>Greenhouse Tomato Breeding Program</h3>
-                                <p>
-                                    This breeding is aimed for the Spanish and Turkish markets. For single and cluster picks, round fruit shape
-                                    and resistances of TYLCV, TSWV, Nematodes and FORL (Fusarium oxysporum f.sp. radicis-lycopersici).
-                                    Some hybrids may include more resistances, such as Cladosporium and Leveillula Taurica (Lv).
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="program-card">
-                                <h3>Open-field Indeterminate Tomatoes</h3>
-                                <p>
-                                    This breeding is for Brazilian, Moroccan, and Turkish markets. The main focus is on large round shape fruits
-                                    (200 grams plus), and resistances of TYLCV, TSWV, Nematodes and FORL. In the near future, F3 (Fusarium oxysporum f.sp. lycopersici)
-                                    will be included as basic resistance in our cultivars.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="program-card">
-                                <h3>Open-field Bush Type Tomatoes</h3>
-                                <p>
-                                    This breeding is for Mediterranean markets. We breed round and elongated shapes, standard sizes (140 - 180 grams),
-                                    and beef sizes (min. 180 grams up to 300 grams and more). We combine the resistances of TYLCV, TSWV and Nematodes
-                                    as basic resistances in our hybrids. However, some hybrids may include more resistances, such as
-                                    Cladosporium and Leveillula Taurica (Lv).
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="tomato-products">
-            <div class="container tomato-container">
-                <div class="tomato-note tomato-note-small">
-                    Agridera operates through international and local distributers around the world.
+                    Agridera eggplant breeding programs are focusing on reliable market varieties with attractive fruit quality and stable field performance.
                 </div>
 
-<div class="tomato-products-grid">
-    <div class="tomato-card">
-        <img src="images/tomato-1000.jpg" alt="TAG 1000">
-        <h4>TAG 1000 (TAG 853)</h4>
-        <p>Tomato Determinate Red Standard Round</p>
-    </div>
-
-    <div class="tomato-card">
-        <img src="images/tomato-1001.jpg" alt="TAG 1001">
-        <h4>TAG 1001 (TAG 855)</h4>
-        <p>Tomato Determinate Red Standard Round</p>
-    </div>
-
-    <a href="tomatoone.html" class="tomato-card">
-        <img src="images/tomato-1002.jpg" alt="TAG 1002">
-        <h4>TAG 1002 (TAG 809)</h4>
-        <p>Tomato Determinate Red Standard Round</p>
-    </a>
-
-    <div class="tomato-card">
-        <img src="images/tomato-1003.jpg" alt="TAG 1003">
-        <h4>TAG 1003 (TAG 834)</h4>
-        <p>Tomato Determinate Red Standard Round</p>
-    </div>
-
-    <div class="tomato-card">
-        <img src="images/tomato-1004.jpg" alt="TAG 1004">
-        <h4>TAG 1004 (TAG 848)</h4>
-        <p>Tomato Determinate Red BEEF Round</p>
-    </div>
-
-    <div class="tomato-card">
-        <img src="images/tomato-1005.jpg" alt="TAG 1005">
-        <h4>TAG 1005 (TAG 800)</h4>
-        <p>Tomato Determinate Red Standard Round</p>
-    </div>
-
-    <div class="tomato-card">
-        <img src="images/tomato-1006.jpg" alt="TAG 1006">
-        <h4>TAG 1006 (TAG 898)</h4>
-        <p>Tomato Determinate Red Elongated</p>
-    </div>
-
-    <div class="tomato-card">
-        <img src="images/tomato-1007.jpg" alt="TAG 1007">
-        <h4>TAG 1007 (TAG 816)</h4>
-        <p>Tomato Determinate Red Elongated</p>
-    </div>
-</div>
+                <div class="tomato-products-grid">
+                    <a
+                        class="tomato-card"
+                        v-for="p in products"
+                        :key="p.id"
+                        :href="'tomatoone.html#' + p.id"
+                    >
+                        <img :src="'img/' + p.image" :alt="p.title">
+                        <h4>{{ p.title }}</h4>
+                        <p>{{ p.short_text }}</p>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -191,11 +103,11 @@
                 <nav class="footer-menu">
                     <a href="#">PROFILE</a>
                     <a href="#">MANAGEMENT</a>
-                    <a href="#">PRODUCTS</a>
+                    <a href="tomatoall.html">PRODUCTS</a>
                     <a href="#">R&amp;D</a>
                     <a href="#">LINKS</a>
                     <a href="#">SITEMAP</a>
-                    <a href="#">CONTACT</a>
+                    <a href="contactus.html">CONTACT</a>
                 </nav>
 
                 <div class="social-links">
@@ -214,6 +126,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
 <script src="js/menu.js"></script>
 </body>
 </html>

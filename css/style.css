@@ -1390,3 +1390,86 @@ img {
         font-size: 16px;
     }
 }
+
+/*EGGPLANT ALL*/
+
+.eggplant-page .tomato-content {
+    background-color: #f1ebf4;
+}
+
+.eggplant-banner {
+    height: 460px;
+    background-image: url("../img/eggplant-banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.eggplant-page .tomato-title {
+    margin-bottom: 18px;
+}
+
+.eggplant-page .tomato-note {
+    margin-bottom: 34px;
+}
+
+/*EGGPLANT ONE*/
+
+.eggplant-one-page .pdf-btn {
+    text-decoration: none;
+}
+
+/*CART*/
+
+.cart-section {
+    padding: 20px 0 40px;
+    background-color: #f3f3f3;
+}
+
+.cart-title {
+    margin: 0 0 24px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #324950;
+    text-align: center;
+}
+
+.cart-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+}
+
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.cart-info h3 {
+    margin: 0 0 8px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #57984C;
+}
+
+.cart-info p {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #324950;
+}

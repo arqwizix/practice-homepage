@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=320, initial-scale=1.0">
-    <title>Tomato one</title>
+    <title>Eggplant one</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -16,164 +16,181 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <div id="app">
 
-    <header class="site-header tomato-header">
-        <div class="container">
-            <div class="header-inner">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="Agridera logo">
+        <header class="site-header tomato-header">
+            <div class="container">
+                <div class="header-inner">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.png" alt="Agridera logo">
+                    </a>
+
+                    <div class="header-right">
+                        <div class="mobile-top-row">
+                            <div class="search-row">
+                                <input type="text" placeholder="Search">
+                                <button type="button" class="search-btn" aria-label="Search">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+
+                            <button class="burger" type="button" aria-label="Open menu">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+
+                        <nav class="main-nav">
+                            <a href="index.html">Home</a>
+                            <a href="#">Company Profile</a>
+                            <a href="tomatoall.html">Products</a>
+                            <a href="#">Services</a>
+                            <a href="#">R &amp; D</a>
+                            <a href="contactus.html">Contact</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="tomato-one-page eggplant-one-page" v-if="product">
+            <div class="container tomato-one-container">
+
+                <a href="tomatoall.html" class="back-link">
+                    <span class="back-link-arrow">←</span>
+                    <span>Return to all eggplants</span>
                 </a>
 
-                <<div class="header-right">
-    <div class="mobile-top-row">
-        <div class="search-row">
-            <input type="text" placeholder="Search">
-            <button type="button" class="search-btn" aria-label="Search">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
+                <section class="tomato-one-top">
+                    <div class="row align-items-start">
+                        <div class="col-lg-6">
+                            <div class="tomato-one-info">
+                                <h1 class="tomato-one-title">{{ product.title }}</h1>
 
-        <div class="burger">
-            <i class="fas fa-bars"></i>
-        </div>
+                                <h2 class="tomato-one-subtitle">
+                                    {{ product.short_text }}
+                                </h2>
+
+                                <div class="section-stars tomato-one-stars">*****</div>
+
+                                <div class="quality-box">
+                                    <img src="images/icon-quality.png" alt="Quality icon">
+                                    <p>Very high yield and<br>excellent fruits quality!</p>
+                                </div>
+
+                                <div class="characteristics-title">CHARACTERISTICS</div>
+
+                                <div class="resistance-block">
+                                    <h3>Resistance</h3>
+                                    <p>HR: Verticillium wilt, Fusarium tolerance;</p>
+                                    <p>IR: Strong field adaptability</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="tomato-one-media">
+                                <img :src="'img/' + product.image" :alt="product.title">
+
+                                <a href="#"
+                                   class="pdf-btn"
+                                   v-if="!btnVisible"
+                                   @click.prevent="addToCart(product.id)">
+                                    <span class="pdf-icon">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </span>
+                                    <span>Add to cart</span>
+                                </a>
+
+                                <a href="contactus.html"
+                                   class="pdf-btn"
+                                   v-if="btnVisible">
+                                    <span class="pdf-icon">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                    <span>Go to cart</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="tomato-one-details">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="detail-group">
+                                <h3>Plant</h3>
+                                <ul>
+                                    <li>Strong vigor and stable field growth.</li>
+                                    <li>Reliable fruit setting during the growing cycle.</li>
+                                    <li>Suitable for fresh market production.</li>
+                                </ul>
+                            </div>
+
+                            <div class="detail-group">
+                                <h3>Fruit</h3>
+                                <ul>
+                                    <li>{{ product.desc }}</li>
+                                    <li>Glossy attractive purple skin.</li>
+                                    <li>Uniform marketable appearance.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="detail-group">
+                                <h3>Cycle</h3>
+                                <ul>
+                                    <li>Spring</li>
+                                    <li>Summer</li>
+                                    <li>Autumn</li>
+                                </ul>
+                            </div>
+
+                            <div class="detail-group">
+                                <h3>Color</h3>
+                                <p class="detail-color">Dark purple</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="container footer-top-inner">
+                    <nav class="footer-menu">
+                        <a href="#">PROFILE</a>
+                        <a href="#">MANAGEMENT</a>
+                        <a href="tomatoall.html">PRODUCTS</a>
+                        <a href="#">R&amp;D</a>
+                        <a href="#">LINKS</a>
+                        <a href="#">SITEMAP</a>
+                        <a href="contactus.html">CONTACT</a>
+                    </nav>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>AGRIDERA SEEDS &amp; AGRICULTURE LTD. © 2020</p>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
-    <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="#">Company Profile</a>
-        <a href="tomatoall.html">Products</a>
-        <a href="#">Services</a>
-        <a href="#">R &amp; D</a>
-        <a href="contactus.html">Contact</a>
-    </nav>
-</div>
-            </div>
-        </div>
-    </header>
-
-    <main class="tomato-one-page">
-        <div class="container tomato-one-container">
-
-            <a href="tomatoall.html" class="back-link">
-                <span class="back-link-arrow">←</span>
-                <span>Return to all tomatoes</span>
-            </a>
-
-            <section class="tomato-one-top">
-                <div class="row align-items-start">
-                    <div class="col-lg-6">
-                        <div class="tomato-one-info">
-                            <h1 class="tomato-one-title">TAG 1002 (TAG 809)</h1>
-
-                            <h2 class="tomato-one-subtitle">
-                                Tomato Determinate<br>
-                                Red Standard Round
-                            </h2>
-
-                            <div class="section-stars tomato-one-stars">*****</div>
-
-                            <div class="quality-box">
-                                <img src="images/icon-quality.png" alt="Quality icon">
-                                <p>Very high yield and<br>excellent fruits quality!</p>
-                            </div>
-
-                            <div class="characteristics-title">CHARACTERISTICS</div>
-
-                            <div class="resistance-block">
-                                <h3>Resistance</h3>
-                                <p>HR: ToMV:0-2; Fol: 1,2; Ve/Vd;</p>
-                                <p>IR: TYLCV</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="tomato-one-media">
-                            <img src="images/tomato-one.jpg" alt="TAG 1002 tomato">
-
-                            <a href="tomatoinfo1.pdf" class="pdf-btn" target="_blank">
-                                <span class="pdf-icon">
-                                    <i class="fas fa-file-pdf"></i>
-                                </span>
-                                <span>Download PDF</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="tomato-one-details">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="detail-group">
-                            <h3>Plant</h3>
-                            <ul>
-                                <li>Strong vigor that provides good leaf coverage.</li>
-                                <li>Very high productivity with good fruit setting.</li>
-                                <li>Early matured variety.</li>
-                            </ul>
-                        </div>
-
-                        <div class="detail-group">
-                            <h3>Fruit</h3>
-                            <ul>
-                                <li>Long shelf life on plant and post harvest.</li>
-                                <li>Nice shiny attractive deep red color.</li>
-                                <li>Average fruit size: 140 - 160 grams.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="detail-group">
-                            <h3>Cycle</h3>
-                            <ul>
-                                <li>Spring</li>
-                                <li>Fall</li>
-                                <li>Winter</li>
-                            </ul>
-                        </div>
-
-                        <div class="detail-group">
-                            <h3>Color</h3>
-                            <p class="detail-color">Red</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-top">
-            <div class="container footer-top-inner">
-                <nav class="footer-menu">
-                    <a href="#">PROFILE</a>
-                    <a href="#">MANAGEMENT</a>
-                    <a href="#">PRODUCTS</a>
-                    <a href="#">R&amp;D</a>
-                    <a href="#">LINKS</a>
-                    <a href="#">SITEMAP</a>
-                    <a href="#">CONTACT</a>
-                </nav>
-
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container">
-                <p>AGRIDERA SEEDS &amp; AGRICULTURE LTD. © 2020</p>
-            </div>
-        </div>
-    </footer>
-<script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>
